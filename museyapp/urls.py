@@ -14,4 +14,4 @@ url(r'projects/(?P<path>.*)$', 'django.views.static.serve', {
 url(r'^paypal/$', views.paypal, name='paypal'), 
 
 )
-#new text
+
