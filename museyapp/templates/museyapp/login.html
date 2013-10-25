@@ -1,0 +1,52 @@
+{% extends "museyapp/base.html" %}
+{% load static %}
+{% block content %}
+    <div id="page">
+      <div id="content">
+        <section id="top">
+          <div class="row-fluid black-box">
+            <div class="container">
+              <div class="pull-center">
+                <a href="/"><img src=" {% static 'museyapp/img/musey-logo.png' %} " ></a>
+                <a href="/" class="menu-btn m-arrow"><img src=" {% static 'museyapp/img/menu-left-arrow.png' %} "></a>
+                <!--
+                <a href="#menu" class="menu-btn"><img src="img/menu-btn.png ' %} "></a>-->
+                
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+      <nav id="menu">
+        <ul>
+          <li class="Selected"><a href="/musey/events"><span class="home-icon"></span>Home</a></li>
+          <li><a href="signup.html"><span class="singup-icon"></span>Sign up | Log in</a></li>
+          <li><a href="account-setting.html"><span class="accounts-icon"></span>Account settings</a></li>
+        </ul>
+        <div class="nav-musey-logo"><a href="index.html"><img src=" {% static 'museyapp/img/nav-musey-logo.png' %} "></a></div>
+      </nav>
+    </div>  
+    <div class="container log">
+      <h6 class="logtext1">Please login to continue</h6>
+      <h2 class="logtext2">Log in</h2>
+      <form class="span3 offset4 top-mar" action="." method="post">
+         {% csrf_token %}
+      <fieldset>
+     {{form}}
+      <label class="checkbox">
+      <input type="checkbox"> Remember Me
+      </label>    
+      <a href="#" class="forgot">Forgot Password</a><br><br>
+      <button class="btn" type="submit">Log me in</button>
+      <p class="facebook-text">or you can login through facebook</p>
+      <button type="submit" class="btn fbtn mar3">Facebook log in</button>
+
+      <p class="clear v-space">Not yet a member? <a class="forgot" href="signup.html">Register now</a></p>
+      </fieldset>
+      </form>
+    </div>
+    
+{% endblock %}  
+
+

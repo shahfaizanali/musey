@@ -1,0 +1,57 @@
+
+{% extends "museyapp/base.html" %}
+{% load static %}
+{% block content %}
+    <div id="page">
+      <div id="content">
+        <section id="top">
+          <div class="row-fluid black-box">
+            <div class="container">
+              <div class="pull-center">
+                <a href="/"><img src=" {% static 'museyapp/img/musey-logo.png' %}" ></a>
+                <div class="menu-btn">
+                <a href="#menu" class="menu-btn"><img src=" {% static 'museyapp/img/menu-btn.png' %}"></a></p>
+              </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+      <nav id="menu">
+        <ul>
+          <li class="Selected"><a href="musey/events"><span class="home-icon"></span>Home</a></li>
+          <li><a href="signup/" style="position:relative"><span class="singup-icon"></span>Sign up</a><div style="left: 28%;
+    position: absolute;
+    top: 11px;"> <span style="float:left">|</span> <a href="login/" style="color:rgba(255, 255, 255, 0.5); margin-left:10px">{{login}}</a></div></li>
+          <li><a href="account-setting.html"><span class="accounts-icon"></span>Account settings</a></li>
+        </ul>
+        <div class="nav-musey-logo"><a href="/"><img src=" {% static 'museyapp/img/nav-musey-logo.png' %}"></a></div>
+      </nav>
+    </div>  
+    <div class="container m-bg">
+      <img src=" {% static 'museyapp/img/titled-bg-top.png' %}" class="">
+      <div class="tbg-bottom">
+          <h2>MUSEY</h2>
+          <p>
+          disrupts the existing relationship between art & culture and value.
+          </p>
+      </div>
+      <img src=" {% static 'museyapp/img/titled-bg-bottom.png' %}" class="top-bg">
+      <a class="gs-btn" href="/musey/events">Get started</a>
+    </div>
+    
+{% endblock %}  
+   <!--
+    <footer class="container-fluid fotternav">
+      <div class="container">
+        <div class="f-nav">
+          <a href="artist-kingkong3.html" class="f-text002">About us</a>
+          <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" class="f-text002">Contact</a>
+          <a href="#" ><img src=" {% static 'img/footer-logo.png"></a>
+        </div>
+      </div>
+    </footer> -->
+   
+

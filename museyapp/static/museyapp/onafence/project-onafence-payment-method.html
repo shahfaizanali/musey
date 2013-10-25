@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Musey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="custom-fonts/fonts.css" rel="stylesheet">
+    <!-- Left Sliding Menu -->
+    <link type="text/css" rel="stylesheet" href="../css/mmenu.css" />
+
+    <style type="text/css">
+      body {
+        padding: 0px;
+        padding: 0px;
+      }
+    </style>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+  </head>
+  <body>
+    <div id="page">
+      <div id="content">
+        <section id="top">
+          <div class="row-fluid black-box">
+            <div class="container">
+              <div class="pull-center">
+                <a href="../index.html"><img src="../img/musey-logo.png" ></a>
+                <div class="menu-btn">
+                <a href="project-kingkong.html" class="menu-btn m-arrow"><img src="../img/menu-left-arrow.png"></a>
+                <!--
+                <a href="#menu" class="menu-btn"><img src="../img/menu-btn.png"></a>-->
+              </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+      
+    </div>  
+    
+    <div class="container home-bottom">
+      <img src="../img/onafence-event.jpg">
+      <a href="#" class="share-box">Share this</a>
+      <div class="e-detail">
+        <div class="event-title">
+          <h3 class="subpages_title">On a Fence</h3>
+          <h6>Paths to Pier 42</h6>
+          <div class="bottom-divider"></div>
+          <div class="thankyou-text">
+            CHAT TRAVIESO
+          </div>
+          <a class="grey-btn">PayPal</a>
+          <a href="project-onafence-thankyou.html" class="gs-btn">Credit Card</a>
+          
+        </div>
+      </div>
+
+        
+      </div>
+
+    </div>
+
+    <footer class="container-fluid fotternav">
+      <div class="container">
+        <div class="f-nav">
+          <a href="about.html" class="f-text002">About us</a>
+          <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" class="f-text002">Contact</a>
+          <a href="event-kingkong.html" ><img src="../img/footer-logo.png"></a>
+        </div>
+      </div>
+    </footer> 
+   
+<script type="text/javascript" src="../js/jquery.js"></script>  
+<script type="text/javascript" src="../js/bootstrap-dropdown.js"></script> 
+<script type="text/javascript" src="../js/jquery.hoverizr.js"></script> 
+<script src="../js/bootstrap-collapse.js"></script>
+
+<!--left slider menu-->
+<script type="text/javascript" src="../js/jquery.mmenu.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('nav#menu').mmenu();
+  });
+</script>
+<!--left slider menu-->
+
+<!---
+<script src="js/transify.js"></script>
+<script type="text/javascript">
+      $('#top').transify({opacityOrig:.45,opacityNew:.6,fadeSpeed:400});
+</script>
+-->
+
+<script type="text/javascript">  
+    $(document).ready(function () {  
+        $('.dropdown-toggle').dropdown();
+         });
+
+        $('.ex-btn').click(function(){
+        $(".ex-div").slideToggle("1000");
+        });
+
+        //to avoide page goes up on click
+
+        $('a.ex-btn, #close, ').click(function(event) {
+        event.preventDefault();
+          $(this).html();
+        });
+
+</script>  
+<script type="text/javascript">
+      //$('img').hide();
+      $(window).load(function() {
+        $('.ex1').hoverizr({speedOut: 'slow',effect:"blur",overlay: "bottom",container: "pipa",width: "100px", height: "100px",stretch: "yes"});
+        $('.ex2').hoverizr({speedOut: 'slow'});
+        $('#ex3').hoverizr({speedIn: 'slow',effect:"invert"});
+      });
+
+      $(".menu").click(function(){
+          $(".top-bar").slideToggle("slow");
+        });
+
+      
+    </script>
+
+  </body>
+  </html>

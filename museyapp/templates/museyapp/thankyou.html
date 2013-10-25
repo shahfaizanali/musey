@@ -1,0 +1,72 @@
+{% extends "museyapp/base.html" %}
+{% load static %}
+{% block content %}
+    <div id="page">
+      <div id="content">
+        <section id="top">
+          <div class="row-fluid black-box">
+            <div class="container">
+              <div class="pull-center">
+                <a href="../index.html"><img src="../img/musey-logo.png" ></a>
+                <div class="menu-btn">
+                <a href="project-onafence.html" class="menu-btn m-arrow"><img src="../img/menu-left-arrow.png"></a>
+                <!--
+                <a href="#menu" class="menu-btn"><img src="../img/menu-btn.png"></a>-->
+              </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+      
+    </div>  
+    
+    <div class="container home-bottom">
+      <img src="../img/onafence-event.jpg">
+      <a href="#" class="share-box">Share this</a>
+      <div class="e-detail">
+        <div class="event-title">
+          <h3 class="subpages_title">{{event.main_title}}</h3>
+          <h6>{{event.Subtitle}}</h6>
+          <div class="bottom-divider"></div>
+          {% for e_artist in event.event_artist_set.all %}
+          <div class="thankyou-text">
+            {{e_artist.artist.first_name}} {{e_artist.artist.last_name}}
+          </div>
+          {% endfor %}
+          <div class="thankt-1">
+          <h3>THANK YOU,</h3>
+          <h3>Wes</h3>
+          <p>Hey, do you want to help us make more of these experiences happen for others?</p>
+          <div>
+          <a class="d-block">$2</a>
+          <a class="d-block">$5</a>
+          <a class="d-block">$10</a>
+          </div>
+          <div>
+          <a class="d-block">$20</a>
+          <a class="d-block">$5</a>
+          <a class="d-block">other</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+        
+      </div>
+
+    </div>
+
+    <footer class="container-fluid fotternav">
+      <div class="container">
+        <div class="f-nav">
+          <a href="about.html" class="f-text002">About us</a>
+          <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" class="f-text002">Contact</a>
+          <a href="event-kingkong.html" ><img src="../img/footer-logo.png"></a>
+        </div>
+      </div>
+    </footer> 
+   
+{% endblock %} 

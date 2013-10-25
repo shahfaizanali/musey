@@ -1,0 +1,75 @@
+{% extends "museyapp/base.html" %}
+{% load static %}
+{% block content %}
+    <div id="page">
+      <div id="content">
+        <section id="top">
+          <div class="row-fluid black-box">
+            <div class="container" style="position:relative">
+              <div class="pull-center">
+                <a href="../index.html"><img src="{% static 'museyapp/img/musey-logo.png'%}" ></a>
+                <div class="menu-btn">
+                <a href="event-onafence.html" class="menu-btn m-arrow"><img src="{% static 'museyapp/img/menu-left-arrow.png'%}"></a>
+                <!--
+                <a href="#menu" class="menu-btn"><img src="../img/menu-btn.png"></a>-->
+              </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+      <nav id="menu">
+        <ul>
+          <li class="Selected"><a href="../index.html"><span class="home-icon"></span>Home</a></li>
+          <li><a href="signup.html"><span class="singup-icon"></span>Sign up | Log in</a></li>
+          <li><a href="account-setting.html"><span class="accounts-icon"></span>Account settings</a></li>
+        </ul>
+        <div class="nav-musey-logo"><a href="../index.html"><img src="{% static 'museyapp/img/nav-musey-logo.png'%}"></a></div>
+      </nav>
+    </div>  
+    
+    <div class="container home-bottom">
+      <img src={{event_img.image.url}}>
+      <a href="#" class="share-box">Share this</a>
+      <div class="e-detail">
+        <div class="event-title">
+          <h3 class="subpages_title">{{event.main_title}}</h3>
+          <h6>{{event.Subtitle}}</h6>
+        </div>
+      </div>
+      <a class="grey-btn"><img src="{% static 'museyapp/img/g-pin.png'%}" class="gpin">{{event.Location}}</a>
+      <a class="grey-btn2">{{event.datefrom}} - {{event.dateto}}</a>
+      <a class="grey-btn2">{{event.timefrom}} - {{event.timeto}}</a>
+      
+      <div class="p-mi">
+        <h6>More Info</h6>
+        <p>{{event.Description}}
+        </p>
+        <div class="p-mi-bottom">
+          {% for e_artist in event.event_artist_set.all %}
+        <div class="links">
+        <h2 class="pull-left">{{e_artist.artist.first_name}} {{e_artist.artist.last_name}}</h2>
+        <a class="pnext-arrow" href="/musey/artists/{{e_artist.artist.id}}"><img src="{% static 'museyapp/img/small-right-arrow.png'%}" style="max-width: 100%;"></a>
+        </div>
+        <p>{{e_artist.artist.statement}}</p>
+        {% endfor %}
+      </div>
+        
+      </div>
+      <a class="gs-btn" href="project-onafence-thankyou.html">Say "Thanks" to {{event.Subtitle}}</a>
+     
+
+    </div>
+    <footer class="container-fluid fotternav">
+      <div class="container">
+        <div class="f-nav">
+          <a href="about.html" class="f-text002">About us</a>
+          <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" class="f-text002">Contact</a>
+          <a href="#" ><img src="{% static 'museyapp/img/footer-logo.png'%}"></a>
+        </div>
+      </div>
+    </footer> 
+   
+{% endblock %}  

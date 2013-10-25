@@ -1,0 +1,65 @@
+{% extends "museyapp/base.html" %}
+{% load static %}
+{% block content %}
+    <div id="page">
+      <div id="content">
+        <section id="top">
+          <div class="row-fluid black-box">
+            <div class="container">
+              <div class="pull-center">
+                <a href="../index.html"><img src="../img/musey-logo.png" ></a>
+                <a href="project-onafence.html" class="menu-btn m-arrow"><img src="../img/menu-left-arrow.png"></a>
+                <!--
+                <a href="#menu" class="menu-btn"><img src="../img/menu-btn.png"></a>-->
+              </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+      
+    </div>  
+    
+    <div class="container home-bottom">
+      <div class="ap">
+        <h1>{{artist.first_name}} {{artist.last_name}}</h1>
+        <div class="bottom-divider"></div>
+        
+        <div class="apic">
+          <img src={{artist.profile_pic.url}} class="artist-pic">
+        </div>
+
+        <div class="bottom-divider"></div>
+        <div>
+          <h4 class="a-loc">{{artist.location}}</h4>
+          <h2>NY</h2>
+        </div>
+        <div class="bottom-divider"></div>
+        <p class="ap-text"><span class="bold-text1">
+{{artist.first_name}} {{artist.last_name}}</span>
+          {{artist.self_desc}}
+        </p>
+        <!--
+        <div class="bold-divider"></div>
+        <a class="ap-btext">On a Fence</a>
+        -->
+        <div class="bold-divider"></div>
+        {% for e in artist.event_artist_set.all%}
+        <a class="ap-btext2" href="/musey/events/{{e.event.id}}">{{e.event.main_title}}</a>
+        <div class="bold-divider"></div>
+        {% endfor %}
+  
+    </div>
+    <footer class="container-fluid fotternav">
+      <div class="container">
+        <div class="f-nav">
+          <a href="about.html" class="f-text002">About us</a>
+          <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" class="f-text002">Contact</a>
+          <a href="event-kingkong.html" ><img src="../img/footer-logo.png"></a>
+        </div>
+      </div>
+    </footer> 
+   
+{% endblock %}  

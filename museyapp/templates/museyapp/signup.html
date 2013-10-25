@@ -1,0 +1,48 @@
+
+{% extends "museyapp/base.html" %}
+{% load static %}
+{% block content %}
+    <div id="page">
+      <div id="content">
+        <section id="top">
+          <div class="row-fluid black-box">
+            <div class="container">
+              <div class="pull-center">
+                <a href="/"><img src=" {% static 'museyapp/img/musey-logo.png'%} " ></a>
+                <a href="/" class="menu-btn m-arrow"><img src=" {% static 'museyapp/img/menu-left-arrow.png'%} "></a>
+                
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+      <nav id="menu">
+        <ul>
+          <li ><a href="event-kingkong.html"><span class="home-icon"></span>Home</a></li>
+          <li class="Selected"><a href="signup.html"><span class="singup-icon"></span>Sign up | Log in</a></li>
+          <li><a href="account-setting.html"><span class="accounts-icon"></span>Account settings</a></li>
+        </ul>
+        <div class="nav-musey-logo"><a href="index.html"><img src=" {% static 'museyapp/img/nav-musey-logo.png'%} "></a></div>
+      </nav>
+    </div>  
+    <div class="container log">
+      <h6 class="logtext1">To continue, you need a MUSEY account</h6>
+      <h2 class="logtext2">Sign up</h2>
+      
+      <form action="." method="post" class="top-mar">
+        {% csrf_token %}
+        <fieldset>
+{{form}}
+  
+
+      <button class="btn mar3" type="submit">Sign me up</button>
+      <p class="log-text2">By signing up, you agree to our terms of use and privacy policy</p>
+      <button class="btn fbtn mar3" type="submit">Facebook log in</button>
+
+      <p class="clear v-space">Already a member. <a class="forgot" href="login.html">Click here.</a></p>
+      </fieldset>
+      
+      </form>
+    </div>
+{% endblock %}  
